@@ -14,7 +14,6 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.newGame();
-
   }
 
   newGame() {
@@ -27,9 +26,9 @@ export class BoardComponent implements OnInit {
     return this.xIsNext ? 'X' : 'O';
   }
 
-  makeMove(idx: number) {
-    if (!this.squares[idx]) {
-      this.squares.splice(idx, 1, this.player);
+  makeMove(index: number) {
+    if (!this.squares[index]) {
+      this.squares.splice(index, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
 
